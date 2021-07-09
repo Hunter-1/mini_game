@@ -15,7 +15,7 @@ class Bullet extends SpriteComponent with Hitbox, Collidable{
 
   @override
   void onMount() {
-    // TODO: implement onMount
+
     super.onMount();
     final shape = HitboxCircle(definition: 0.5);
     addShape(shape);
@@ -23,7 +23,6 @@ class Bullet extends SpriteComponent with Hitbox, Collidable{
 
   @override
   void onCollision(Set<Vector2> intersectionPoints, Collidable other) {
-    // TODO: implement onCollision
     super.onCollision(intersectionPoints, other);
     if(other is Enemy){
       this.remove();
@@ -33,7 +32,6 @@ class Bullet extends SpriteComponent with Hitbox, Collidable{
 
   @override
   void update(double dt) {
-    // TODO: implement update
     super.update(dt);
 
     this.position += Vector2(0, -1) * this.speed * dt;

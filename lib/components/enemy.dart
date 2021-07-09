@@ -32,7 +32,6 @@ class Enemy extends SpriteComponent with KnowsGameSize,Hitbox,Collidable,HasGame
   }
   @override
   void onMount() {
-    // TODO: implement onMount
     super.onMount();
     final shape = HitboxCircle(definition: 0.9);
     addShape(shape);
@@ -40,7 +39,6 @@ class Enemy extends SpriteComponent with KnowsGameSize,Hitbox,Collidable,HasGame
 
   @override
   void onCollision(Set<Vector2> intersectionPoints, Collidable other) {
-    // TODO: implement onCollision
     super.onCollision(intersectionPoints, other);
     if(other is Bullet){
       this.remove();
@@ -63,11 +61,6 @@ class Enemy extends SpriteComponent with KnowsGameSize,Hitbox,Collidable,HasGame
               )));
       gameRef.add(particleComponent);
     }
-  }
-  @override
-  void onRemove() {
-    // TODO: implement onRemove
-    super.onRemove();
   }
 }
 

@@ -46,7 +46,6 @@ class EnemyManager extends BaseComponent
 
   @override
   void update(double dt) {
-    // TODO: implement update
     super.update(dt);
     timer.update(dt);
   }
